@@ -5,8 +5,17 @@ void main() => runApp(MaterialApp(
       home: Home(),
     ));
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  String x = 'light mode';
+  Color _color;
+  get color => _color;
+  set color(value) => setState(() => _color = value);
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
