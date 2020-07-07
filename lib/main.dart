@@ -12,16 +12,17 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   String x = 'light mode';
+  String y = 'dark mode';
   Color _color;
   get color => _color;
   set color(value) => setState(() => _color = value);
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: _color,
       body: Center(
         child: Text(
-          'Light mode!',
+          x,
           style: TextStyle(
             color: Colors.pink,
             fontSize: 50,
@@ -32,12 +33,13 @@ class _HomeState extends State<Home> {
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
           FloatingActionButton.extended(
-            label: Text('Dark Mode'),
-            onPressed: null,
-          ),
+              label: Text('Dark Mode'),
+              onPressed: () =>
+                  {_color = Colors.black, y = 'Dark mode', setState(() {})}),
           FloatingActionButton.extended(
             label: Text('Light Mode'),
-            onPressed: null,
+            onPressed: () =>
+                {_color = Colors.white, x = 'light mode', setState(() {})},
           ),
         ],
       ),
