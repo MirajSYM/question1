@@ -1,12 +1,19 @@
 Question (a):
 
-
+Here in the project the the information flow is determined by the state management.
+By information flow what I meant is,changing infromation and making it accessible to other widget. 
+Therefore, if we do not apply state management the widget might get stuck in one state.
+meaning, the application will not be able to change (ie, from light mode to dark mode).
 
 Question (b):
 
-
+In this application the body is the state part. By changing the light to dark mode
+we are just changing the state of the body. We are doing that by pressing the floating action 
+button.
 
 Question (c):
 
-
-
+Declarative UI aproach helps the app to change UI without any compilation. 
+Which helps the app to easily shift states.
+In this application we are shifting to dark theme from light without any recopilation of the application. 
+Also the color of the text shifts from one to another without the need of recopilation.
